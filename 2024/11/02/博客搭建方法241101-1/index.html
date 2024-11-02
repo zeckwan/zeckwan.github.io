@@ -28,7 +28,7 @@
 <meta property="og:description" content="一.事前准备 域名（非必须，你也可以使用免费域名，或者GitHub.io或Pages.dev分配的域名也可以） GitHub（必须，你需要注册一个GitHub帐号） Cloudflare（非必须，你需要注册一个Cloudflare帐号，这样你就可以将博客部署在CF的CDN里加速，但是你也可以直接使用GitHub.io分配的域名）  二.软件支持 Node（必须） Git（必须） VSCode（非必">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-11-02T03:31:49.555Z">
-<meta property="article:modified_time" content="2024-11-02T05:40:48.066Z">
+<meta property="article:modified_time" content="2024-11-02T05:59:42.443Z">
 <meta property="article:author" content="Zeck Wan">
 <meta name="twitter:card" content="summary">
   
@@ -77,7 +77,7 @@
   <div class="content">
     <div class="top bread-nav footnote"><div class="left"><div class="flex-row" id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a>
 <span class="sep"></span><a class="cap breadcrumb" href="/">文章</a></div>
-<div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2024-11-02T03:31:49.555Z">2024-11-02</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2024-11-02T05:40:48.066Z">2024-11-02</time></span></div></div></div>
+<div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2024-11-02T03:31:49.555Z">2024-11-02</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2024-11-02T05:59:42.443Z">2024-11-02</time></span></div></div></div>
     
     <div class="bottom only-title">
       
@@ -102,41 +102,32 @@
 <li><p>创建一个文件夹来保存博客源码（我这里选的路径为D:&#x2F;Hexo-Blog），在文件夹内右键鼠标，选择 <strong>Open Git Bash here</strong></p>
 </li>
 <li><p>在 <strong>Git Bash</strong> 输入如下命令安装 Hexo</p>
-</li>
-</ol>
   <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cli &amp;&amp; hexo -v</span><br></pre></td></tr></table></figure>
-
-<ol start="3">
-<li>安装完后输入hexo -v验证是否安装成功。</li>
-</ol>
+</li>
+<li><p>安装完后输入hexo -v验证是否安装成功。</p>
   <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo -v</span><br></pre></td></tr></table></figure>
-
-<ol start="4">
-<li>初始化 Hexo 项目安装相关依赖。</li>
+</li>
+<li><p>初始化 Hexo 项目安装相关依赖。</p>
+  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo init blog-wan</span><br><span class="line">cd blog-wan</span><br><span class="line">cnpm install</span><br></pre></td></tr></table></figure></li>
 </ol>
-  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo init blog-wan</span><br><span class="line">cd blog-wan</span><br><span class="line">cnpm install</span><br></pre></td></tr></table></figure>
-
 <ul>
 <li>初始化后文件夹内有9个文件，结构如下图：</li>
 </ul>
 <img src=https://raw.githubusercontent.com/zeckwan/images_store/main/001.png>
 
 <ol start="5">
-<li>启动项目</li>
-</ol>
+<li><p>启动项目</p>
   <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo cl; hexo s</span><br></pre></td></tr></table></figure>
-
-<ol start="6">
-<li>打开浏览器，输入地址：<a target="_blank" rel="noopener" href="http://localhost:4000/">http://localhost:4000/</a> ，看到下面的效果，说明你的博客已经构建成功了。</li>
+</li>
+<li><p>打开浏览器，输入地址：<a target="_blank" rel="noopener" href="http://localhost:4000/">http://localhost:4000/</a> ，看到下面的效果，说明你的博客已经构建成功了。</p>
+</li>
 </ol>
 <h3 id="四-主题美化"><a href="#四-主题美化" class="headerlink" title="四.主题美化"></a>四.主题美化</h3><ol>
 <li>Git 安裝</li>
 </ol>
 <ul>
-<li>在博客根目录里安装最新版主题</li>
+<li>在博客根目录里安装最新版主题<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone -b main https://github.com/xaoxuu/hexo-theme-stellar.git themes/stellar</span><br></pre></td></tr></table></figure></li>
 </ul>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone -b main https://github.com/xaoxuu/hexo-theme-stellar.git themes/stellar</span><br></pre></td></tr></table></figure>
-
 <ol start="2">
 <li>应用主题</li>
 </ol>
@@ -147,38 +138,35 @@
 <li>配置主题与主站配置文件</li>
 </ol>
 <ul>
-<li>本地预览</li>
+<li>本地预览<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo cl; hexo s</span><br></pre></td></tr></table></figure></li>
 </ul>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo cl; hexo s</span><br></pre></td></tr></table></figure>
-
-<h3 id="五-将静态博客挂载到-GitHub-Pages"><a href="#五-将静态博客挂载到-GitHub-Pages" class="headerlink" title="五.将静态博客挂载到 GitHub Pages"></a>五.将静态博客挂载到 GitHub Pages</h3><p>Github使用账号：<a href="mailto:&#122;&#x65;&#99;&#x6b;&#50;&#48;&#x32;&#x31;&#48;&#x33;&#x31;&#x30;&#x40;&#x67;&#97;&#x6d;&#x69;&#108;&#x2e;&#x63;&#111;&#x6d;">&#122;&#x65;&#99;&#x6b;&#50;&#48;&#x32;&#x31;&#48;&#x33;&#x31;&#x30;&#x40;&#x67;&#97;&#x6d;&#x69;&#108;&#x2e;&#x63;&#111;&#x6d;</a></p>
+<h3 id="五-将静态博客挂载到-GitHub-Pages"><a href="#五-将静态博客挂载到-GitHub-Pages" class="headerlink" title="五.将静态博客挂载到 GitHub Pages"></a>五.将静态博客挂载到 GitHub Pages</h3><p>Github使用账号：<a href="mailto:&#122;&#101;&#x63;&#107;&#x32;&#x30;&#x32;&#49;&#48;&#51;&#x31;&#48;&#64;&#x67;&#x61;&#109;&#x69;&#x6c;&#46;&#99;&#111;&#x6d;">&#122;&#101;&#x63;&#107;&#x32;&#x30;&#x32;&#49;&#48;&#51;&#x31;&#48;&#64;&#x67;&#x61;&#109;&#x69;&#x6c;&#46;&#99;&#111;&#x6d;</a></p>
 <ol>
-<li>安装 hexo-deployer-git</li>
-</ol>
+<li><p>安装 hexo-deployer-git</p>
   <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
-
-<ol start="2">
-<li>修改 _config.yml 文件</li>
+</li>
+<li><p>修改 _config.yml 文件</p>
+</li>
 </ol>
 <ul>
 <li><p>在blog-demo目录下的_config.yml，就是整个Hexo框架的配置文件了。可以在里面修改大部分的配置。详细可参考官方的配置描述。</p>
 </li>
 <li><p>修改最后一行的配置，将repository修改为你自己的github项目地址即可，还有分支要改为main代表主分支（注意缩进）。</p>
-</li>
-</ul>
   <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line"> type: git</span><br><span class="line"> repository: git@github.com:zeckwan/zeckwan.github.io.git</span><br><span class="line"> branch: main</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>Url 修改为自己的 Github 地址  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://zeckwan.github.io</span><br></pre></td></tr></table></figure></li>
+</li>
+<li><p>Url 修改为自己的 Github 地址</p>
+  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://zeckwan.github.io</span><br></pre></td></tr></table></figure></li>
 </ul>
 <ol start="3">
 <li>修改好配置后，运行如下命令，将代码部署到 GitHub（Hexo三连）。</li>
 </ol>
 <ul>
-<li>Vscode终端</li>
+<li><p>Git 终端</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo clean &amp;&amp; hexo generate &amp;&amp; hexo deploy  </span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Vscode终端</p>
+  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo cl; hexo g; hexo d</span><br></pre></td></tr></table></figure></li>
 </ul>
-  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo cl; hexo g; hexo d</span><br></pre></td></tr></table></figure>
-
 <h3 id="六-将静态博客挂载到-Cloudflare-Pages"><a href="#六-将静态博客挂载到-Cloudflare-Pages" class="headerlink" title="六.将静态博客挂载到 Cloudflare Pages"></a>六.将静态博客挂载到 Cloudflare Pages</h3><ul>
 <li><p>本地部署 <a target="_blank" rel="noopener" href="http://localhost:4000/">http://localhost:4000/</a></p>
 </li>
