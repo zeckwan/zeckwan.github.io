@@ -17,18 +17,18 @@
   <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#000">
   <meta name="theme-color" content="#f9fafb">
   
-  <title>博客搭建方法241101.1 - Zeck</title>
+  <title>节点搭建教程 - Zeck</title>
 
   
-    <meta name="description" content="一.事前准备 域名（非必须，你也可以使用免费域名，或者GitHub.io或Pages.dev分配的域名也可以） GitHub（必须，你需要注册一个GitHub帐号） Cloudflare（非必须，你需要注册一个Cloudflare帐号，这样你就可以将博客部署在CF的CDN里加速，但是你也可以直接使用GitHub.io分配的域名）  二.软件支持 Node（必须） Git（必须） VSCode（非必">
+    <meta name="description" content="VPS搭建Hysteril2节点，套CDN加速链接网址： 1https:&#x2F;&#x2F;afeinet.blogspot.com&#x2F;2024&#x2F;11&#x2F;02.html 一.VPS服务器推荐：RN或Vultr 二.准备域名 付费域名1年只要1美元, 支持支付宝注册网址👉www.namesilo.com优惠码: afeifree小白 注册视频教程:https:&#x2F;&#x2F;youtu.be&#x2F;U0Mmh9atE6w&amp;t&#x3D;">
 <meta property="og:type" content="article">
-<meta property="og:title" content="博客搭建方法241101.1">
-<meta property="og:url" content="http://zeckwan.github.io/2024/11/02/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%96%B9%E6%B3%95241101-1/index.html">
+<meta property="og:title" content="节点搭建教程">
+<meta property="og:url" content="http://zeckwan.github.io/2024/11/08/%E8%8A%82%E7%82%B9%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B/index.html">
 <meta property="og:site_name" content="Zeck">
-<meta property="og:description" content="一.事前准备 域名（非必须，你也可以使用免费域名，或者GitHub.io或Pages.dev分配的域名也可以） GitHub（必须，你需要注册一个GitHub帐号） Cloudflare（非必须，你需要注册一个Cloudflare帐号，这样你就可以将博客部署在CF的CDN里加速，但是你也可以直接使用GitHub.io分配的域名）  二.软件支持 Node（必须） Git（必须） VSCode（非必">
+<meta property="og:description" content="VPS搭建Hysteril2节点，套CDN加速链接网址： 1https:&#x2F;&#x2F;afeinet.blogspot.com&#x2F;2024&#x2F;11&#x2F;02.html 一.VPS服务器推荐：RN或Vultr 二.准备域名 付费域名1年只要1美元, 支持支付宝注册网址👉www.namesilo.com优惠码: afeifree小白 注册视频教程:https:&#x2F;&#x2F;youtu.be&#x2F;U0Mmh9atE6w&amp;t&#x3D;">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2024-11-02T03:31:49.555Z">
-<meta property="article:modified_time" content="2024-11-02T05:59:42.443Z">
+<meta property="article:published_time" content="2024-11-08T07:38:01.590Z">
+<meta property="article:modified_time" content="2024-11-08T07:57:09.620Z">
 <meta property="article:author" content="Zeck Wan">
 <meta name="twitter:card" content="summary">
   
@@ -77,112 +77,93 @@
   <div class="content">
     <div class="top bread-nav footnote"><div class="left"><div class="flex-row" id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a>
 <span class="sep"></span><a class="cap breadcrumb" href="/">文章</a></div>
-<div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2024-11-02T03:31:49.555Z">2024-11-02</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2024-11-02T05:59:42.443Z">2024-11-02</time></span></div></div></div>
+<div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2024-11-08T07:38:01.590Z">2024-11-08</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2024-11-08T07:57:09.620Z">2024-11-08</time></span></div></div></div>
     
     <div class="bottom only-title">
       
       <div class="text-area">
-        <h1 class="text title"><span>博客搭建方法241101.1</span></h1>
+        <h1 class="text title"><span>节点搭建教程</span></h1>
         
       </div>
     </div>
     
   </div>
-  </div><article class="md-text content"><h3 id="一-事前准备"><a href="#一-事前准备" class="headerlink" title="一.事前准备"></a>一.事前准备</h3><ol>
-<li>域名（非必须，你也可以使用免费域名，或者GitHub.io或Pages.dev分配的域名也可以）</li>
-<li>GitHub（必须，你需要注册一个GitHub帐号）</li>
-<li>Cloudflare（非必须，你需要注册一个Cloudflare帐号，这样你就可以将博客部署在CF的CDN里加速，但是你也可以直接使用GitHub.io分配的域名）</li>
-</ol>
-<h3 id="二-软件支持"><a href="#二-软件支持" class="headerlink" title="二.软件支持"></a>二.软件支持</h3><ol>
-<li>Node（必须）</li>
-<li>Git（必须）</li>
-<li>VSCode（非必须，这是一款轻量型的代码编辑器，可以帮助你养成一个很好的编程习惯）</li>
-</ol>
-<h3 id="三-初始化-Hexo-博客"><a href="#三-初始化-Hexo-博客" class="headerlink" title="三.初始化 Hexo 博客"></a>三.初始化 Hexo 博客</h3><ol>
-<li><p>创建一个文件夹来保存博客源码（我这里选的路径为D:&#x2F;Hexo-Blog），在文件夹内右键鼠标，选择 <strong>Open Git Bash here</strong></p>
+  </div><article class="md-text content"><p>VPS搭建Hysteril2节点，套CDN加速<br><strong>链接网址：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://afeinet.blogspot.com/2024/11/02.html</span><br></pre></td></tr></table></figure>
+<h3 id="一-VPS服务器"><a href="#一-VPS服务器" class="headerlink" title="一.VPS服务器"></a>一.VPS服务器</h3><p>推荐：RN或Vultr</p>
+<h3 id="二-准备域名"><a href="#二-准备域名" class="headerlink" title="二.准备域名"></a>二.准备域名</h3><ol>
+<li><p>付费域名<br>1年只要1美元, 支持支付宝<br>注册网址👉<a target="_blank" rel="noopener" href="http://www.namesilo.com/">www.namesilo.com</a><br>优惠码: afeifree<br>小白 注册视频教程:<br><a target="_blank" rel="noopener" href="https://youtu.be/U0Mmh9atE6w&t=109s">https://youtu.be/U0Mmh9atE6w&amp;t=109s</a></p>
 </li>
-<li><p>在 <strong>Git Bash</strong> 输入如下命令安装 Hexo</p>
-  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cli &amp;&amp; hexo -v</span><br></pre></td></tr></table></figure>
+<li><p>免费域名<br>小白 us.kg 注册教程:<br><a target="_blank" rel="noopener" href="https://youtu.be/TVkLIwJnIYs">https://youtu.be/TVkLIwJnIYs</a></p>
 </li>
-<li><p>安装完后输入hexo -v验证是否安装成功。</p>
-  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo -v</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>初始化 Hexo 项目安装相关依赖。</p>
-  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo init blog-wan</span><br><span class="line">cd blog-wan</span><br><span class="line">cnpm install</span><br></pre></td></tr></table></figure></li>
 </ol>
-<ul>
-<li>初始化后文件夹内有9个文件，结构如下图：</li>
-</ul>
-<img src=https://raw.githubusercontent.com/zeckwan/images_store/main/001.png>
+<h3 id="三-域名托管到-Cloudflare"><a href="#三-域名托管到-Cloudflare" class="headerlink" title="三.域名托管到 Cloudflare"></a>三.域名托管到 Cloudflare</h3><ol>
+<li><p>注册1个Cloudflare账号<br>注册网址: cloudflare.com<br>小白 注册视频教程:<br><a target="_blank" rel="noopener" href="https://youtu.be/U0Mmh9atE6w&t=37s">https://youtu.be/U0Mmh9atE6w&amp;t=37s</a><br>小白 域名托管到Cloudflare<br><a target="_blank" rel="noopener" href="https://youtu.be/U0Mmh9atE6w&t=612s">https://youtu.be/U0Mmh9atE6w&amp;t=612s</a></p>
+</li>
+<li><p>注册 Cloudflare 并添加域名：<br>登录 Cloudflare，将你拥有的域名添加到 Cloudflare。</p>
+</li>
+<li><p>更改域名的 DNS 记录：<br>将域名的 DNS A 记录指向 VPS 的 IP 地址（如 192.3.85.247,改成你自己的IP），<br>暂时不要启用 CDN 加速（不是橙色小云图标, 而是灰色小云图标）。</p>
+</li>
+</ol>
+<h3 id="四-ssh链接vps"><a href="#四-ssh链接vps" class="headerlink" title="四.ssh链接vps"></a>四.ssh链接vps</h3><p>本教程采用 finalshell作为连接vps的工具.<br>finalshell下载链接:<br>请先转存到你自己的云盘, 再下载, 避免失联<br>Windows X64版,下载地址:<br>小白 finalshell 下载及安装教程:<br><a target="_blank" rel="noopener" href="https://youtu.be/-p6Cy_j-mXI&t=39s">https://youtu.be/-p6Cy_j-mXI&amp;t=39s</a></p>
+<p>卸载旧脚本<br>如果你是全新VPS, 可以跳过此步骤.<br>如果你采用了我这个教程而搭建的vpn节点, 请按下面步骤执行.<br>停止Hysteria2</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl stop hysteria-server.service</span><br></pre></td></tr></table></figure>
+<p>复制 粘贴以下脚本</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget -N --no-check-certificate https://raw.githubusercontent.com/flame1ce/hysteria2-install/main/hysteria2-install-main/hy2/hysteria.sh &amp;&amp; bash hysteria.sh</span><br></pre></td></tr></table></figure>
+<p>输入 2<br>卸载脚本<br>查看防火墙开启了哪些端口</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ufw status</span><br></pre></td></tr></table></figure>
+<p>开启端口80 443</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">iptables -I INPUT -p tcp --dport 80 -j ACCEPT</span><br><span class="line">iptables -I INPUT -p tcp --dport 443 -j ACCEPT</span><br></pre></td></tr></table></figure>
+<p>或者<br>懒人模式 关闭防火墙 开启所有端口</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ufw disable</span><br></pre></td></tr></table></figure>
 
-<ol start="5">
-<li><p>启动项目</p>
-  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo cl; hexo s</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>打开浏览器，输入地址：<a target="_blank" rel="noopener" href="http://localhost:4000/">http://localhost:4000/</a> ，看到下面的效果，说明你的博客已经构建成功了。</p>
-</li>
-</ol>
-<h3 id="四-主题美化"><a href="#四-主题美化" class="headerlink" title="四.主题美化"></a>四.主题美化</h3><ol>
-<li>Git 安裝</li>
-</ol>
-<ul>
-<li>在博客根目录里安装最新版主题<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone -b main https://github.com/xaoxuu/hexo-theme-stellar.git themes/stellar</span><br></pre></td></tr></table></figure></li>
-</ul>
-<ol start="2">
-<li>应用主题</li>
-</ol>
-<ul>
-<li>修改 hexo 配置文件_config.yml，把主题改为anzhiyu<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">theme: stellar</span><br></pre></td></tr></table></figure></li>
-</ul>
-<ol start="3">
-<li>配置主题与主站配置文件</li>
-</ol>
-<ul>
-<li>本地预览<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo cl; hexo s</span><br></pre></td></tr></table></figure></li>
-</ul>
-<h3 id="五-将静态博客挂载到-GitHub-Pages"><a href="#五-将静态博客挂载到-GitHub-Pages" class="headerlink" title="五.将静态博客挂载到 GitHub Pages"></a>五.将静态博客挂载到 GitHub Pages</h3><p>Github使用账号：<a href="mailto:&#122;&#x65;&#99;&#107;&#x32;&#48;&#50;&#49;&#48;&#x33;&#x31;&#x30;&#x40;&#x67;&#x61;&#109;&#x69;&#x6c;&#x2e;&#99;&#111;&#109;">&#122;&#x65;&#99;&#107;&#x32;&#48;&#50;&#49;&#48;&#x33;&#x31;&#x30;&#x40;&#x67;&#x61;&#109;&#x69;&#x6c;&#x2e;&#99;&#111;&#109;</a></p>
-<ol>
-<li><p>安装 hexo-deployer-git</p>
-  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>修改 _config.yml 文件</p>
-</li>
-</ol>
-<ul>
-<li><p>在blog-demo目录下的_config.yml，就是整个Hexo框架的配置文件了。可以在里面修改大部分的配置。详细可参考官方的配置描述。</p>
-</li>
-<li><p>修改最后一行的配置，将repository修改为你自己的github项目地址即可，还有分支要改为main代表主分支（注意缩进）。</p>
-  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line"> type: git</span><br><span class="line"> repository: git@github.com:zeckwan/zeckwan.github.io.git</span><br><span class="line"> branch: main</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>Url 修改为自己的 Github 地址</p>
-  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://zeckwan.github.io</span><br></pre></td></tr></table></figure></li>
-</ul>
-<ol start="3">
-<li>修改好配置后，运行如下命令，将代码部署到 GitHub（Hexo三连）。</li>
-</ol>
-<ul>
-<li><p>Git 终端</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo clean &amp;&amp; hexo generate &amp;&amp; hexo deploy  </span><br></pre></td></tr></table></figure>
-</li>
-<li><p>Vscode终端</p>
-  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo cl; hexo g; hexo d</span><br></pre></td></tr></table></figure></li>
-</ul>
-<h3 id="六-将静态博客挂载到-Cloudflare-Pages"><a href="#六-将静态博客挂载到-Cloudflare-Pages" class="headerlink" title="六.将静态博客挂载到 Cloudflare Pages"></a>六.将静态博客挂载到 Cloudflare Pages</h3><ul>
-<li><p>本地部署 <a target="_blank" rel="noopener" href="http://localhost:4000/">http://localhost:4000/</a></p>
-</li>
-<li><p>Github <a href="http://zeckwan.github.io/">http://zeckwan.github.io/</a></p>
-</li>
-<li><p>cloudflare pages <a target="_blank" rel="noopener" href="https://zeckwan-github-io.pages.dev/">zeckwan-github-io.pages.dev</a></p>
-</li>
-<li><p>自定义域名 <a target="_blank" rel="noopener" href="https://miaofeng002.us.kg/">miaofeng002.us.kg</a></p>
-</li>
-</ul>
+<h3 id="五-搭建节点"><a href="#五-搭建节点" class="headerlink" title="五.搭建节点"></a>五.搭建节点</h3><p>一键安装Hysteria2</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bash &lt;(curl -fsSL https://get.hy2.sh/)</span><br></pre></td></tr></table></figure>
+<p>显示三行红字, 代表安装成功</p>
+<p>设置开机自启</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl enable hysteria-server.service</span><br></pre></td></tr></table></figure>
+<p>生成自签证书</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">openssl req -x509 -nodes -newkey ec:&lt;(openssl ecparam -name prime256v1) -keyout /etc/hysteria/server.key -out /etc/hysteria/server.crt -subj &quot;/CN=bing.com&quot; -days 36500 &amp;&amp; sudo chown hysteria /etc/hysteria/server.key &amp;&amp; sudo chown hysteria /etc/hysteria/server.crt</span><br></pre></td></tr></table></figure>
+<p>服务器配置文件</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">cat &lt;&lt; EOF &gt; /etc/hysteria/config.yaml</span><br><span class="line">listen: :443 #监听端口</span><br><span class="line"></span><br><span class="line">#使用CA证书</span><br><span class="line">acme:</span><br><span class="line">  domains:</span><br><span class="line">    - hy.afeifree.com #你的域名，需要先解析到服务器ip</span><br><span class="line">  email: afei2028@gmail.com</span><br><span class="line"></span><br><span class="line">auth:</span><br><span class="line">  type: password</span><br><span class="line">  password: afei123 #设置认证密码</span><br><span class="line">  </span><br><span class="line">masquerade:</span><br><span class="line">  type: proxy</span><br><span class="line">  proxy:</span><br><span class="line">    url: https://bing.com #伪装网址</span><br><span class="line">    rewriteHost: true</span><br><span class="line">EOF</span><br></pre></td></tr></table></figure>
+<p>根据你的个人情况, 可修改以下参数:<br>监听端口 443<br>密码 123456<br>伪装网站 <a target="_blank" rel="noopener" href="http://www.bing.com/">www.bing.com</a></p>
+<p>本教程采用CA证书, 需要1个域名,<br>将域名解析到vps</p>
+<p>复制上面的服务器配置文件, 粘贴到vps, 敲回车</p>
+<p>查看Hysteria2状态</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl status hysteria-server.service</span><br></pre></td></tr></table></figure>
+<p>如果是 inactive (dead), 代表没有启动</p>
+<p>确认已经是英文输入状态, 按 q 键 退出查看状态</p>
+<p>重启Hysteria2</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl restart hysteria-server.service</span><br></pre></td></tr></table></figure>
+<p>查看Hysteria2状态</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl status hysteria-server.service</span><br></pre></td></tr></table></figure>
+<p>看到绿色字体的 active (ruuning) 代表hysterial服务已经运行</p>
+<p>如果最后一行末尾是 acme_client 则等待1分钟后, 再次查看Hysteria2状态</p>
+<p>重复以上查看步骤<br>直到在最后一行末尾看到 server up and running 为止</p>
+<p>设置开机自启</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl enable hysteria-server.service</span><br></pre></td></tr></table></figure>
+
+<h3 id="六-电脑客户端-配置"><a href="#六-电脑客户端-配置" class="headerlink" title="六.电脑客户端 配置"></a>六.电脑客户端 配置</h3><p>下载 v2rayN 6.60版</p>
+<p>去其官网进行下载<br><a target="_blank" rel="noopener" href="https://github.com/2dust/v2rayN/releases/latest">https://github.com/2dust/v2rayN/releases/latest</a></p>
+<p>使用方法：<br>找到目录 v2rayN\zz_v2rayN-With-Core-SelfContained\bin\hysteria2<br>删除旧文件</p>
+<p>下载hysterial2<br>去其官网进行下载<br><a target="_blank" rel="noopener" href="https://github.com/apernet/hysteria/releases">https://github.com/apernet/hysteria/releases</a></p>
+<p>将下载的exe文件粘贴到目录 zz_v2ryaN\bin\hysteria</p>
+<p>关掉梯子, 不挂代理, 测试你的上网速度  speedtest.cn</p>
+<p>客户端配置文件</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">server: 192.3.85.247:443 #你的vps的ipv4</span><br><span class="line">auth: afei123 #密码</span><br><span class="line"></span><br><span class="line">bandwidth:</span><br><span class="line">  up: 20 mbps #你家宽带的上传速度</span><br><span class="line">  down: 100 mbps #下载速度</span><br><span class="line">  </span><br><span class="line">tls:</span><br><span class="line">  sni: hy.afeifree.com #你的域名</span><br><span class="line">  insecure: false #使用自签时需要改成true</span><br><span class="line"></span><br><span class="line">socks5:</span><br><span class="line">  listen: 127.0.0.1:1080</span><br><span class="line">http:</span><br><span class="line">  listen: 127.0.0.1:8080</span><br></pre></td></tr></table></figure>
+<p>  如果你觉得网速够用就行, 可以填比最大速度稍小的数值.<br>比如, 想要观看流畅4K, 50MB的速度, 足矣.</p>
+<p>复制以上配置, 新建文本文件, 粘贴, 保存为”hy-afei”.</p>
+<p>打开v2rayN, 服务器&gt;添加自定义配置服务器<br>别名: hy-afei<br>地址: 点击”编辑”按钮, 选择上面的文本文件”hy-afei”.<br>Core类型: hysteria2<br>Socks端口: 1080</p>
+<p>测速  speedtest.net</p>
+<h3 id="七-配置-Cloudflare-CDN"><a href="#七-配置-Cloudflare-CDN" class="headerlink" title="七.配置 Cloudflare CDN"></a>七.配置 Cloudflare CDN</h3><p>启用 CDN 加速（橙色小云图标）。<br>设置端口穿透： Cloudflare 默认仅支持 80 和 443 端口。确保 Hysteria2 运行在这些端口上。</p>
+<h3 id="八-其他命令-参考"><a href="#八-其他命令-参考" class="headerlink" title="八.其他命令 参考"></a>八.其他命令 参考</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">#移除 Hysteria 及相关服务</span><br><span class="line">bash &lt;(curl -fsSL https://get.hy2.sh/) --remove</span><br><span class="line"></span><br><span class="line">#查看日志</span><br><span class="line">journalctl -u hysteria-server.service</span><br></pre></td></tr></table></figure>
+
 <hr>
 <p>end…</p>
 
 
 </article>
-<div class="related-wrap" id="read-next"><section class="body"><div class="item" id="prev"><div class="note">较新文章</div><a href="/2024/11/02/Windows%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85/">Windows系统安装</a></div><div class="item" id="next"></div></section></div>
+<div class="related-wrap" id="read-next"><section class="body"><div class="item" id="prev"></div><div class="item" id="next"><div class="note">较早文章</div><a href="/2024/11/02/Windows%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85/">Windows系统安装</a></div></section></div>
 
 
 
@@ -196,7 +177,7 @@
 
 
 
-<widget class="widget-wrapper toc" id="data-toc" collapse="false"><div class="widget-header dis-select"><span class="name">本文目录</span><a class="cap-action" onclick="sidebar.toggleTOC()" ><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6h11m-11 6h11m-11 6h11M4 6h1v4m-1 0h2m0 8H4c0-1 2-2 2-3s-1-1.5-2-1"/></svg></a></div><div class="widget-body"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80-%E4%BA%8B%E5%89%8D%E5%87%86%E5%A4%87"><span class="toc-text">一.事前准备</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C-%E8%BD%AF%E4%BB%B6%E6%94%AF%E6%8C%81"><span class="toc-text">二.软件支持</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%89-%E5%88%9D%E5%A7%8B%E5%8C%96-Hexo-%E5%8D%9A%E5%AE%A2"><span class="toc-text">三.初始化 Hexo 博客</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9B%9B-%E4%B8%BB%E9%A2%98%E7%BE%8E%E5%8C%96"><span class="toc-text">四.主题美化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%94-%E5%B0%86%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2%E6%8C%82%E8%BD%BD%E5%88%B0-GitHub-Pages"><span class="toc-text">五.将静态博客挂载到 GitHub Pages</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%AD-%E5%B0%86%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2%E6%8C%82%E8%BD%BD%E5%88%B0-Cloudflare-Pages"><span class="toc-text">六.将静态博客挂载到 Cloudflare Pages</span></a></li></ol></div><div class="widget-footer">
+<widget class="widget-wrapper toc" id="data-toc" collapse="false"><div class="widget-header dis-select"><span class="name">本文目录</span><a class="cap-action" onclick="sidebar.toggleTOC()" ><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6h11m-11 6h11m-11 6h11M4 6h1v4m-1 0h2m0 8H4c0-1 2-2 2-3s-1-1.5-2-1"/></svg></a></div><div class="widget-body"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80-VPS%E6%9C%8D%E5%8A%A1%E5%99%A8"><span class="toc-text">一.VPS服务器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C-%E5%87%86%E5%A4%87%E5%9F%9F%E5%90%8D"><span class="toc-text">二.准备域名</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%89-%E5%9F%9F%E5%90%8D%E6%89%98%E7%AE%A1%E5%88%B0-Cloudflare"><span class="toc-text">三.域名托管到 Cloudflare</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9B%9B-ssh%E9%93%BE%E6%8E%A5vps"><span class="toc-text">四.ssh链接vps</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%94-%E6%90%AD%E5%BB%BA%E8%8A%82%E7%82%B9"><span class="toc-text">五.搭建节点</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%AD-%E7%94%B5%E8%84%91%E5%AE%A2%E6%88%B7%E7%AB%AF-%E9%85%8D%E7%BD%AE"><span class="toc-text">六.电脑客户端 配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%83-%E9%85%8D%E7%BD%AE-Cloudflare-CDN"><span class="toc-text">七.配置 Cloudflare CDN</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%AB-%E5%85%B6%E4%BB%96%E5%91%BD%E4%BB%A4-%E5%8F%82%E8%80%83"><span class="toc-text">八.其他命令 参考</span></a></li></ol></div><div class="widget-footer">
 
 <a class="top" onclick="util.scrollTop()"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 12c0-4.714 0-7.071 1.464-8.536C4.93 2 7.286 2 12 2c4.714 0 7.071 0 8.535 1.464C22 4.93 22 7.286 22 12c0 4.714 0 7.071-1.465 8.535C19.072 22 16.714 22 12 22s-7.071 0-8.536-1.465C2 19.072 2 16.714 2 12Z"/><path stroke-linecap="round" stroke-linejoin="round" d="m9 15.5l3-3l3 3m-6-4l3-3l3 3"/></g></svg><span>回到顶部</span></a></div></widget>
 </div></aside><div class='float-panel blur'>
